@@ -45,7 +45,7 @@ TEST(PracticeTest, is_mixed_case_palindrome)
 TEST(PracticeTest, is_special_char_palindrome)
 {
     Practice obj;
-    bool actual = obj.isPalindrome("!@#$%^&*()()*&^%$#@!");
+    bool actual = obj.isPalindrome("!@#$%^&*((*&^%$#@!");
     ASSERT_TRUE(actual);
 }
 
@@ -63,11 +63,24 @@ TEST(PracticeTest, is_spaces_palindrome)
     ASSERT_TRUE(actual);
 }
 
+TEST(PracticeTest, is_empty_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("");
+    ASSERT_TRUE(actual);
+}
 
 TEST(PracticeTest, is_not_simple_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("ab");
+    ASSERT_FALSE(actual);
+}
+
+TEST(PracticeTest, is_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. beep A single lap should be completed each time you hear this sound. ding Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.");
     ASSERT_FALSE(actual);
 }
 
