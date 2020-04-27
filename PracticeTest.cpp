@@ -76,7 +76,7 @@ TEST(PracticeTest, asc_sort_desc)
 {
     Practice obj;
 		int one = 1, two = 2, three = 3;
-    bool actual = obj.sortDescending(one,two,three);
+    obj.sortDescending(one,two,three);
     ASSERT_GE(one, two);
 		ASSERT_GE(two, three);
 }
@@ -85,7 +85,7 @@ TEST(PracticeTest, same_sort_desc)
 {
     Practice obj;
 		int one = 1, two = 1, three = 1;
-    bool actual = obj.sortDescending(one,two,three);
+    obj.sortDescending(one,two,three);
     ASSERT_GE(one, two);
 		ASSERT_GE(two, three);
 }
@@ -94,7 +94,7 @@ TEST(PracticeTest, desc_sort_desc)
 {
     Practice obj;
 		int one = 3, two = 2, three = 1;
-    bool actual = obj.sortDescending(one,two,three);
+   	obj.sortDescending(one,two,three);
     ASSERT_GE(one, two);
 		ASSERT_GE(two, three);
 }
@@ -103,7 +103,7 @@ TEST(PracticeTest, neg_sort_desc)
 {
     Practice obj;
 		int one = -3, two = 2, three = 1;
-    bool actual = obj.sortDescending(one,two,three);
+    obj.sortDescending(one,two,three);
     ASSERT_GE(one, two);
 		ASSERT_GE(two, three);
 }
